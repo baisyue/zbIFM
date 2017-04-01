@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <title>智博接口管理系统</title>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="header">
+        <div class="sign-bar">
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="file">
+            <div class="pic">
+                <img src="../public/images/icon/setting.png" alt=""/>
+            </div>
+            <div class="name">
+                系统应用
+            </div>
+        </div>
+        <div class="file">
+            <div class="pic">
+                <img src="../public/images/icon/setting.png" alt=""/>
+            </div>
+            <div class="name">
+                系统应用
+            </div>
+        </div>
+        <div class="file">
+            <div class="pic">
+                <img src="../public/images/icon/setting.png" alt=""/>
+            </div>
+            <div class="name">
+                系统应用
+            </div>
+        </div>
+        <div class="file">
+            <div class="pic">
+                <img src="../public/images/icon/setting.png" alt=""/>
+            </div>
+            <div class="name">
+                系统应用
+            </div>
+        </div>
+
+
+        <div class="add-btn">
+            <div class="add-wrap">
+                <div class="horizon"></div>
+                <div class="vertical"></div>
+            </div>
+            <div class="name">创建新接口</div>
+        </div>
+        <div class="fileMenu">
+            <ul>
+                <li class="option open"><i></i>打开</li>
+                <li class="option edit"><i></i>编辑</li>
+                <li class="option del"><i></i>删除</li>
+            </ul>
+        </div>
+
+        <div class="config">
+            <div class="drag-bar">编辑接口信息</div>
+            <form>
+                <div class="item">接口名称： <input type="text" class="item-name"/></div>
+                <div class="item">接口地址： <input type="text" class="item-addr"/></div>
+                <div class="item">选择图标： <i class="selected-img"></i></div>
+                <div class="item">
+                    <input type="radio" name='item-icon' id="pic1" class="item-icon"/>
+                    <input type="radio" name='item-icon' id="pic2" class="item-icon"/>
+                    <input type="radio" name='item-icon' id="pic3" class="item-icon"/>
+                    <input type="radio" name='item-icon' id="pic4" class="item-icon"/>
+                    <div class="icon-wrap">
+                        <label for="pic1"><i class="item-img"></i></label>
+                        <label for="pic2"><i class="item-img"></i></label>
+                        <label for="pic3"><i class="item-img"></i></label>
+                        <label for="pic4"><i class="item-img"></i></label>
+
+                    </div>
+                </div>
+                <div class="item">功能描述：
+                    <textarea cols="52" rows="6" class="desc"></textarea>
+                </div>
+                <input class="btn cancel" type="reset" value="取消">
+                <input class="btn ok" type="button" value="提交">
+            </form>
+
+        </div>
+        <!--仿系统alert弹层-->
+        <div class="alertMask">
+            <div class="alert">
+                <p class="content">请输入手机号！</p>
+                <p class="confirm">确定</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">
+
+    </div>
+</div>
+
+
+<script src="../public/js/tools.js"></script>
+</body>
+</html>

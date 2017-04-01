@@ -1,0 +1,57 @@
+
+body,div,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,input,button,textarea,p,th,td { margin:0; padding:0; }
+body {background:#fff;color:#333; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+/**/
+.header{height: 40px;background: rgba(255,255,255,.15);}
+
+/**/
+.wrap,body{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background-image: url('../images/2.jpg');background-size: 100% 100%;min-width: 60px;min-height: 300px;}
+.container{position: absolute;width: 100%;top:40px;bottom: 25px;overflow: hidden;}
+.file,.add-btn{width: 60px;padding:12px 16px ;text-align: center;text-shadow: 1px 1px 3px #000;color: #abc;position: absolute;}
+.file:hover,.add-btn:hover{background: rgba(250,250,250,.2);}
+.file:hover .pic{transform: scale(.85) ;}
+.file .pic{transition: transform-all,.3s, linear; }
+.name{font-size: .8em;}
+ul{list-style: none;padding:  .5em 0;}
+li{}
+.pic{}
+.pic img,.icon-img img{width: 100%;}
+
+/*新建按钮*/
+.add-wrap{width: 60px;height: 60px;position: relative;}
+.add-wrap div{position: absolute;width: 40px;height: 4px;background: #ccc;}
+.horizon{left: 10px;top: 28px;}
+.vertical{top:28px;left: 10px;transform: rotate(90deg)}
+
+
+/*编辑框*/
+.mask{position: absolute;width: 100%;height: 100%;}
+.config{width: 420px;height: auto;position: absolute;box-shadow: 1px 1px 3px #ccc;background: rgba(255,255,255,.9);padding: 36px 20px 50px 16px;display: none;}
+.item{line-height: 1.5em;margin: 1em;}
+.item input{line-height: 1.5em;width: 310px;}
+.item:nth-child(4) input{position: absolute;left: -9999px;}
+.item-img{width: 40px;height: 40px;display: inline-block;background-size: 100%}
+.icon-wrap{border:1px solid #ccc;padding: 5px}
+.selected-img{width: 25px;height: 25px;background-size: 100%;;display: inline-block;vertical-align: -5px;}
+.item textarea{resize: none;padding: .5em;line-height: 1.5em;}
+.btn{line-height: 1.5em;font-size: 1.2em;width: 150px;}
+.cancel{margin:10px 60px 10px 25px; }
+.drag-bar{position: absolute;width: 100%;height: 30px;left:0;top:0;box-shadow: 0 1px 3px rgba(20,20,20,.2);text-align: center;line-height: 30px;}
+
+
+/*右键菜单*/
+.fileMenu{position: absolute;width: 130px;height: 100px;background: rgba(250,250,250,.9);box-shadow:1px 1px 13px rgba(0,0,0,.5),-1px -1px 13px rgba(0,0,0,.5);display: none;border-radius: 3px;}
+.option{padding: 5px 5px 5px 15px;text-align: left;box-shadow: 0 1px 32px rgba(100,100,100,.2)}
+.option:hover{background: rgba(0,0,0,.2);cursor: pointer;}
+.option i{display:inline-block;margin-right:15px;width: 16px;height: 16px;background-image: url('../images/icon/menu_icon.png');vertical-align: -2px;}
+.open i{background-position: -16px -16px;}
+.edit i{background-position: 1px -702px;}
+.del i{background-position: 0 -80px;}
+.footer{position: absolute;width: 100%;height: 25px;bottom: 0;background: rgba(255,255,255,.2)}
+
+/*仿alert*/
+.alertMask {position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.7);z-index: 10000;top: 0;box-sizing: border-box;display: none;}
+.alert {background: #fff;border-radius: 5px;padding: 1em;width: 90%;top: 50%;left: 5%;box-sizing: border-box;max-width: 360px;margin: 7em auto 0;}
+.content {font-size: .7em;color: #666;line-height: 4em;}
+.confirm {width: 100%;line-height: 2.5em;text-align: center;border: 1px solid #ccc;border-radius: 5px;}
