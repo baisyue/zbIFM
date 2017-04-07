@@ -1,16 +1,20 @@
 {
-  "name": "interfaceManager",
+  "name": "zbIFM",
   "version": "1.0.0",
   "description": "智博接口管理系统",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "repository":"",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.0"
   }
 }

@@ -141,12 +141,12 @@ var app = {
         var curIcon =document.querySelector('.selected-img');
         for(var i=0;i<icons.length;i++){
 
-            imgs[i].style.backgroundImage='url(../public/images/icon/'+pics[i]+')';
+            imgs[i].style.backgroundImage='url(../images/icon/'+pics[i]+')';
             icons[i].index = i;
             icons[i].onchange = function(){
                 if (this.checked){
-                    curIcon.dataSrc='../public/images/icon/'+pics[this.index];
-                    curIcon.style.backgroundImage='url(../public/images/icon/'+pics[this.index]+')';
+                    curIcon.dataSrc='../images/icon/'+pics[this.index];
+                    curIcon.style.backgroundImage='url(../images/icon/'+pics[this.index]+')';
                 }
             }
         }
@@ -183,14 +183,25 @@ var app = {
     //region 提交新建接口
     sub: function () {
         if(app.check()){
-            var data = {};
-            data.name = document.querySelector('.item-name').value;
-            data.addr = document.querySelector('.item-addr').value;
-            data.desc = document.querySelector('.desc').value;
-            data.imgSrc = document.querySelector('.selected-img').dataSrc;
-            app.createIcon(data);//创建桌面图标
-            app.initialize();//初始化位置
-            document.querySelector('.cancel').click();//隐藏编辑框并清空编辑表单
+
+            var zifData = {};
+            zifData.name = document.querySelector('.item-name').value;
+            zifData.addr = document.querySelector('.item-addr').value;
+            zifData.desc = document.querySelector('.desc').value;
+            zifData.imgSrc = document.querySelector('.selected-img').dataSrc;
+            $.ajax({
+                type: 'post',
+                async: false,
+                data: codeData,
+                url: '/zif/add',
+                success: function (data) {
+                    console.log(data);
+                    app.createIcon(data);//创建桌面图标
+                    app.initialize();//初始化位置
+                    document.querySelector('.cancel').click();//隐藏编辑框并清空编辑表单
+                }
+            });
+
         }
     },
     //endregion
