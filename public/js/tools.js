@@ -89,8 +89,8 @@ var app = {
         if(this.right)return;
         ev = ev||window.event;
         var fileMenu = tool.size(document.querySelector('.fileMenu'));
-        if(ev.button== '2'){//
-            var target = ev.target||ev.srcElement;
+	    var target = ev.target||ev.srcElement;
+	    if(ev.button == '2'){//
             if(target.className =='file'||target.parentNode.className =='file'||target.parentNode.parentNode.className =='file'){
                 var file = target.className=='file'?target:(target.parentNode&&target.parentNode.className=='file'?target.parentNode:target.parentNode.parentNode);
                 fileMenu.index = file.index;
@@ -116,8 +116,8 @@ var app = {
             }else{
                 fileMenu.style.display='none';
             }
-        }else if(ev.button== '0'){
-            //fileMenu.style.display='none';
+        }else if(ev.button== '0'&&target.className ==''){
+            fileMenu.style.display='none';
         }
 
     },
@@ -197,9 +197,10 @@ var app = {
 
     //region 编辑桌面图标信息
     edit: function(){
-        console.log(1);
+        //console.log(1);
         var index = document.querySelector('.fileMenu').index;
         var data = document.querySelectorAll('.file')[index].data;
+        console.log(index);
         console.log(data);
         document.querySelector('.item-name').value = data.name;
         document.querySelector('.item-addr').value = data.addr;
