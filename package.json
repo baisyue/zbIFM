@@ -1,7 +1,7 @@
 {
   "name": "zbIFM",
   "version": "1.0.0",
-  "description": "",
+  "description": "智博接口管理系统",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,16 +10,16 @@
     "type": "git",
     "url": "https://github.com/baisyue/zbIFM.git"
   },
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
+  "devDependencies": {}
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "request": "^2.81.0",
-    "socket.io": "^1.7.3",
-    "ws": "^2.2.2"
-  },
-  "devDependencies": {}
+    "mongoose": "^4.9.0"
+  }
 }
