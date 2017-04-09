@@ -20,39 +20,20 @@
     </div>
 
     <div class="container">
-
-        <!--<div class="file">-->
-            <!--<div class="pic">-->
-                <!--<img src="../public/images/icon/setting.png" alt=""/>-->
-            <!--</div>-->
-            <!--<div class="name">-->
-                <!--系统应用-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="file">-->
-            <!--<div class="pic">-->
-                <!--<img src="../public/images/icon/setting.png" alt=""/>-->
-            <!--</div>-->
-            <!--<div class="name">-->
-                <!--系统应用-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="file">-->
-            <!--<div class="pic">-->
-                <!--<img src="../public/images/icon/setting.png" alt=""/>-->
-            <!--</div>-->
-            <!--<div class="name">-->
-                <!--系统应用-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="file">-->
-            <!--<div class="pic">-->
-                <!--<img src="../public/images/icon/setting.png" alt=""/>-->
-            <!--</div>-->
-            <!--<div class="name">-->
-                <!--系统应用-->
-            <!--</div>-->
-        <!--</div>-->
+        <%
+        for(var i=0;i<zifs.length;i++){
+            var zif = zifs[i];
+            var info = JSON.stringify(zif);
+        %>
+        <div class="file" id=<%=info%>>
+            <div class="pic">
+                <img src="<%=zif.imgSrc%>" title="<%=zif.desc%>" />
+            </div>
+            <div class="name">
+                <%=zif.name%>
+            </div>
+        </div>
+        <%}%>
 
 
         <div class="add-btn">
@@ -115,6 +96,7 @@
 </div>
 
 
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.js"></script>
 <script src="js/tools.js"></script>
 </body>
 </html>

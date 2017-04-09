@@ -8,10 +8,10 @@ mongoose.Promise = Promise;
 //连接数据库
 mongoose.connect('mongodb://127.0.0.1/zbIFM');
 var ZifSchema = new mongoose.Schema({
-   zifName:{type:String,isRequired:true},
-   zifSrc:{type:String,isRequired:true},
-   zifDesc:{type:String,isRequired:true},
-   iconSrc:{type:String,isRequired:true}
+   name:{type:String,isRequired:true},
+   addr:{type:String,isRequired:true},
+   desc:{type:String,isRequired:true},
+   imgSrc:{type:String,isRequired:true}
 });
 
 exports.Zif = mongoose.model('Zif',ZifSchema);

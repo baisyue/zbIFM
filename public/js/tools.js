@@ -165,7 +165,9 @@ var app = {
         var pic = document.createElement('div');
         var name = document.createElement('div');
         var img = document.createElement('img');
+	    var info = JSON.stringify(data);
         file.className = 'file';
+        file.id = info;
         pic.className = 'pic';
         name.className = 'name';
         file.data = data;
@@ -183,19 +185,17 @@ var app = {
     //region 提交新建接口
     sub: function () {
         if(app.check()){
-
-            var zifData = {};
+            var zifData = {"as":2123};
             zifData.name = document.querySelector('.item-name').value;
             zifData.addr = document.querySelector('.item-addr').value;
             zifData.desc = document.querySelector('.desc').value;
             zifData.imgSrc = document.querySelector('.selected-img').dataSrc;
-            $.ajax({
-                type: 'post',
-                async: false,
-                data: codeData,
-                url: '/zif/add',
-                success: function (data) {
-                    console.log(data);
+	        $.ajax({
+                type: 'POST',
+		        url: '/zif/add',
+		        async: false,
+                data: zifData,
+		        success: function (data) {
                     app.createIcon(data);//创建桌面图标
                     app.initialize();//初始化位置
                     document.querySelector('.cancel').click();//隐藏编辑框并清空编辑表单
@@ -210,7 +210,8 @@ var app = {
     edit: function(){
         //console.log(1);
         var index = document.querySelector('.fileMenu').index;
-        var data = document.querySelectorAll('.file')[index].data;
+        var data = document.querySelectorAll('.file')[index].id;
+	    data = JSON.parse(data);
         console.log(index);
         console.log(data);
         document.querySelector('.item-name').value = data.name;
